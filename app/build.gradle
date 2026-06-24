@@ -1,0 +1,45 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.jayjay'
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // JUnit
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.12.1'
+
+    // Selenium
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.33.0'
+    testImplementation 'org.seleniumhq.selenium:selenium-support:4.33.0'
+
+    // WebDriverManager
+    testImplementation 'io.github.bonigarcia:webdrivermanager:6.1.0'
+
+    // Cucumber
+    testImplementation 'io.cucumber:cucumber-java:7.23.0'
+    testImplementation 'io.cucumber:cucumber-junit-platform-engine:7.23.0'
+
+    // Rest Assured
+    testImplementation 'io.rest-assured:rest-assured:5.5.6'
+
+    // AssertJ
+    testImplementation 'org.assertj:assertj-core:3.27.3'
+
+    // Jackson
+    testImplementation 'com.fasterxml.jackson.core:jackson-databind:2.19.1'
+
+    //platform
+    testImplementation 'org.junit.platform:junit-platform-suite:1.12.1'
+
+    
+}
+
+test {
+    useJUnitPlatform()
+}
