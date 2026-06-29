@@ -62,9 +62,14 @@ public class LoginPage {
     }
 
     public void clickAddToCartButton() {
+    WebDriverWait wait =
+    new WebDriverWait(driver, Duration.ofSeconds(10));
+
+    wait.until(
+    ExpectedConditions.elementToBeClickable(addToCartButton)
+);
 
     driver.findElement(addToCartButton).click();
-
     System.out.println("ADD TO CART SUCCESS");
 }
 
